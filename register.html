@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>注册页面，调到<a href="./login.html">登录页面</a></p>
+    账号 <input type="text" name="" id="user"></br>
+    密码 <input type="text" name="" id="pass">
+    <input type="button" value="确定" id="btn">
+</body>
+<script>
+
+    class register {
+        constructor() {
+            this.user = document.getElementById("user");
+            this.pass = document.getElementById("pass");
+            this.btn = document.getElementById("btn");
+            this.url = "http://127.0.0.1:80/api";
+            this.addEvent();
+        }
+
+        addEvent() {
+            var that = this;
+            btn.onclick = function () {
+                ajaxGet(that.url, function (res) {
+                    that.res = JSON.parse(res)
+                    alert(that.res.msg)
+                }, {
+                    user: user.value,
+                    pass: pass.value,
+                    type: "register"
+                })
+            }
+        }
+
+
+
+    }
+
+
+
+
+    new register();
+
+
+
+
+    function ajaxGet(url, cb, data) {
+        data = data || {}
+        var str = "";
+        for (var i in data) {
+            str += `${[i]}=${data[i]}&`
+        }
+        var d = new Date();
+        url = url + "?" + str + "__lz=" + d.getTime();
+        var ajax = new XMLHttpRequest();
+        ajax.open("get", url, true);
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) {
+                cb(ajax.responseText);
+            }
+        }
+        ajax.send();
+    }
+</script>
+
+</html>

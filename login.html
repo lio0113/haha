@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>登录页面，没有账号去<a href="./register.html">注册</a></p>
+    账号 <input type="text" name="" id="user"></br>
+    密码 <input type="text" name="" id="pass">
+    <input type="button" value="确定" id="btn">
+</body>
+<script>
+
+    class login {
+        constructor() {
+            this.user = document.getElementById("user");
+            this.pass = document.getElementById("pass");
+            this.btn = document.getElementById("btn");
+            this.url = "http://127.0.0.1:80/api";
+            this.addEven();
+        }
+
+        addEven() {
+            var that = this;
+            this.btn.onclick = function () {
+                ajaxPost(that.url, function (res) {
+                    that.res = JSON.parse(res);
+                    alert(that.res.msg)
+                }, {
+                    user: user.value,
+                    pass: pass.value,
+                    type: "login"
+                })
+            }
+        }
+
+    }
+
+
+
+    new login();
+
+
+
+
+    function ajaxPost(url, cb, data) {
+        data = data || {}
+        var str = "";
+        for (var i in data) {
+            str += `${[i]}=${data[i]}&`
+        }
+        var ajax = new XMLHttpRequest();
+        ajax.open("post", url, true);
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) {
+                cb(ajax.responseText);
+            }
+        }
+        ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        ajax.send(str);
+    };
+</script>
+
+</html>

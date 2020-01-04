@@ -1,0 +1,27 @@
+$font-size:20px;
+
+p{font-size: $font-size;background: pink;text-align:center;}
+$color:red bule black;
+p{
+    color:nth($color,3)
+}
+
+
+$l:(1 10px 20px)(2 20px 30px)(3 30px 40px);
+@each $a,$b,$c in $l {
+    .box#{$a}{
+        width:$b;
+        height:$c;
+    }
+}
+
+
+@function pTr($px){
+    @return $px/16px*1rem
+}
+
+
+p{
+    height: pTr(100px);
+}
+
