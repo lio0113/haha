@@ -152,6 +152,7 @@ dl{
     height: 16px;
     width: 18px;
     background: url("https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423") no-repeat center;
+    background-position: -693px -840px;
 }
 
 .nav{
@@ -363,5 +364,82 @@ dl{
     margin: 19px auto 6px;
 }
 
+.wocao{
+} 
+
+.wocao .floor{
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.floor-boxl{
+    float: left;
+    width: 230px;
+}
+
+.floor-boxl a:nth-child(1) img{
+    width: 230px;
+    height: 360px;
+}
+
+.floor-boxl a:nth-child(2) img{
+    width: 230px;
+    height: 180px;
+    margin-top: 6px;
+}
+
+.tit{
+    margin: 30px auto 20px;
+    font-size: 26px;
+}
+
+.product-item{
+    width: 230px;
+    float: left;
+    margin-left: 10px;
+    height: 270px;
+    margin-bottom: 10px;
+    a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+    background: #fff;
+    }
+    h4{
+    padding: 0 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    height: 44px;
+    line-height: 22px;
+    color: #333;
+    }
+    p{
+    margin-top: 7px;
+    font-size: 14px;
+    color: #e73c31;
+    font-weight: 700;
+    }
+    .img-box{
+        padding: 10px 0 25px;
+    }
+    img{
+    width: 130px;
+    height: 130px;
+    display: inline;
+    }
+}
+
+/* .img-box img{
+vertical-align: top;
+width: 130px;
+height: 130px;
+display: inline;
+} */
 
 
