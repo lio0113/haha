@@ -3,6 +3,11 @@
 }
 *{margin:0;padding:0;}
 
+html{
+    background:#F2F2F2;
+
+}
+
 li{
     list-style: none;
 }
@@ -29,15 +34,21 @@ dl{
     float: left;
     padding-left: 7px;
 }
+
+.hl li a:hover{
+    color:#37a3ff;
+}
+
 .hr li{
     float: right;
     padding-left: 7px;
 }
-a:hover{
+.hr li a:hover{
     color:#37a3ff;
 }
 
 .search{
+    background:#fff;
     height: 114.77px;
     display: flex;
 }
@@ -75,7 +86,7 @@ a:hover{
 .index-input .index-box i{
     position: absolute;
     right: 13px;
-    top: 2px;
+    top: 3px;
     height: 30px;
     width: 30px;
     background:url(https://resources.edianzu.com/mall_new/online/images/search_del_btn.png) no-repeat center;
@@ -109,6 +120,7 @@ a:hover{
 }
 
 
+
 .search-index .index-word{
     font-size: 12px;
     margin-top: 5px;
@@ -116,6 +128,11 @@ a:hover{
 
 .search-index .index-word a{
     padding-right: 11px;
+}
+
+.search-index .index-word a:hover{
+    padding-right: 11px;
+    color: #31a3ff;
 }
 
 .search-index .index-shop-car{
@@ -137,12 +154,214 @@ a:hover{
     background: url("https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423") no-repeat center;
 }
 
+.nav{
+    background: #fff;
+
+}
+
+.nav .nav-content{
+    margin: 0 auto;
+    height: 40px;
+}
+
+.nav .nav-content h2{
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: #31a3ff;
+    text-align: center;
+
+}
+
+.nav .nav-content h2 a{    
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.nav .nav-left-list{
+    padding-top:10px ;
+    background: #f8f8f8;
+}
+
+.nav .nav-left-list li{
+    height: 50px;
+}
+
+.nav .nav-left-list a{
+    display: block;
+}
+
+.nav .nav-left-list .title-icon{
+    display:inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 10px 3px 0 16px;
+
+}
+
+.nav .nav-left-list .title-icon1{
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.nav .nav-left-list .nav-ii{
+    background: url("https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423") no-repeat center;
+    width: 7px;
+    height: 13px;
+    display: inline-block;
+    color: black;
+    background-position: -521px -351px;
+    padding-right: 10px;
+}
+
+.nav .nav-left-list span{
+    display: inline-block;
+    width: 120px;
+    font: 14px/50px "";
+    color: #333;
+    text-align: left;
+}
+
+.nav .nav-content .nav-left{
+    float: left;
+}
+
+.nav .nav-content .nav-right ul{
+    float: left;
+    line-height: 40px;
+
+}
+
+.nav .nav-content .nav-right li{
+    float: left;
+    padding: 0 15px;
+}
+
+.nav .nav-content .nav-right li a:hover{
+    border-bottom: 2px solid #31a3ff;
+    margin-bottom: 3px;
+    color: #31a3ff;
+}
 
 
+.banner{
+    height: 460px;
+    margin: 0 auto;
+    background:#F2F2F2;
+}
 
+.banner .right-box{
+    float:right;
+    height: 450px;
+    width: 210px;
+ background: red;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 
+.banner .banner-big{
+    height: 100%;
+    width: 760px;
+    float: right;
+}
 
+.banner .banner-box{
+    margin-top: 10px;
+    float: right;
+    width: 760px;
+    height: 330px;
+    background: blue;
+}
 
+.banner .banner-box img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.banner .banner-sm{
+    margin-top: 10px;
+    width: 100%;
+    height: 110px;
+    float: right;
+    background-color: #fff;
+    display: flex;
+}
+
+.banner .banner-sm ul{
+    width: 100%;
+
+}
+
+.banner .banner-sm ul li{
+    float: left;
+    text-align: center;
+    width: 20%;
+    height: 110px;
+
+}
+
+.banner .banner-sm ul li a{
+    display: line-block;
+    width: 20%;
+    height: 110px;
+}
+
+.banner .banner-sm ul span{
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+        color: #333;
+}
+
+.banner .banner-sm ul li:nth-child(1) a i{
+    display: block;
+    background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+    background-position: -234px -387px;
+    width: 50px;
+    height: 50px;
+    margin: 19px auto 6px;
+}
+
+.banner .banner-sm ul li:nth-child(2) a i{
+    display: block;
+    background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+    background-position: -940px 0px;
+    width: 50px;
+    height: 50px;
+    margin: 19px auto 6px;
+}
+
+.banner .banner-sm ul li:nth-child(3) a i{
+    display: block;
+    background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+    background-position: -940px -336px;
+    width: 50px;
+    height: 50px;
+    margin: 19px auto 6px;
+}
+
+.banner .banner-sm ul li:nth-child(4) a i{
+    display: block;
+    background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+    background-position: -940px -224px;
+    width: 50px;
+    height: 50px;
+    margin: 19px auto 6px;
+}
+
+.banner .banner-sm ul li:nth-child(5) a i{
+    display: block;
+    background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+    background-position: -234px -275px;
+    width: 50px;
+    height: 50px;
+    margin: 19px auto 6px;
+}
 
 
 
