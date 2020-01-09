@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css/shopCar.css">
+
+<body>
+    <div class="header">
+        <dl class="layout">
+            <dt class="hl">
+                <ul>
+                    <li>您好，欢迎来到易点租</li>
+                    <li>
+                        <a href="./login.html">登录</a>
+                        <a href="./register.html">注册</a>
+                    </li>
+                </ul>
+            </dt>
+            <dd class="hr">
+                <ul>
+                    <li><a href="">我的订单</a></li>
+                    <li><a href="">我的账单</a></li>
+                    <li><a href="">个人中心</a></li>
+                    <li><a href="">服务中心</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <div class="search">
+        <dl class="search-index layout">
+            <dt class="index-logo">
+                <a href="./shouye.html"><img src="https://resources.edianzu.com/mall_new/online/images/logo1.jpg"
+                        alt=""></a>
+            </dt>
+            <dd class="index-search">
+                <div class="index-input">
+                    <div class="index-box">
+                        <input type="text" name="" id="" placeholder="免押金租电脑">
+                        <i class="index-btn-none"></i>
+                    </div>
+                    <input type="button" value="搜索">
+                </div>
+            </dd>
+        </dl>
+    </div>
+
+
+    <div class="shopping-cart">
+        <div class="all-product clearfix">
+            全部商品
+            <span class="sum">4</span>
+        </div>
+        <div class="product-tit">
+            <div class="product-cb-all-box"><label><input type="checkbox" class="product-cb-all">全选</label></div>
+            <div class="width-1">商品信息</div>
+            <div class="width-2">单价</div>
+            <div class="width-3 text-center">数量</div>
+            <div class="width-4 text-center">首付期数</div>
+            <div class="width-5">小计</div>
+            <div class="width-6">操作</div>
+        </div>
+        <!-- 租赁商品 -->
+        <div class="leased-goods">
+            <div class="lease-product">
+
+
+            </div>
+        </div>
+
+        <!-- 结算部分 -->
+
+
+
+        <div class="bill-box">
+            <div class="bill-tit clearfix">
+                已选租赁商品<i id="selected_zl_sum">4</i>件，
+            </div>
+            <ul class="bill-detail">
+                <li class="rent-amount">
+                    <span>应付租金：</span>
+                    <i class="pay-rent-total">348.00</i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="settle-accounts-box">
+            <div class="product-cb-all-box">
+                <label><input type="checkbox" class="product-cb-all">全选</label>
+                <a href="javascript:;" id="del_selected">删除选中商品</a>
+                <a href="javascript:;" id="clear_carts">清除购物车</a>
+            </div>
+            <div class="fr">
+                <div class="accounts-box">
+                    <!-- 在线支付 -->
+                    <div class="pay-online">
+                        <span>当前需支付：</span>
+                        <strong class="pay-total">8948.00</strong>
+                    </div>
+                </div>
+                <input type="button" class="settle-accounts" value="去结算">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./libs/jquery.js"></script>
+<script src="./libs/shopCar.js"></script>
+
+</html>

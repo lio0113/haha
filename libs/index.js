@@ -1,12 +1,6 @@
 class xuanran {
     constructor() {
         this.floor = document.querySelector(".floor");
-        this.floor1 = document.getElementById("floor-1");
-        this.floor2 = document.getElementById("floor-2");
-        this.floor3 = document.getElementById("floor-3");
-        this.floor4 = document.getElementById("floor-4");
-        this.floor5 = document.getElementById("floor-5");
-        this.floor6 = document.getElementById("floor-6");
         this.url = "/shuju.json";
         this.load();
     }
@@ -22,36 +16,35 @@ class xuanran {
     }
 
     display() {
-        // console.log(this.res);
         var str = ""
         for (var i = 0; i < this.res.length; i++) {
-            str +=
-                ` <div class="floor-boxl">
-                    <a href="##">
-                        <img src="${this.res[i].img}" alt="">
-                    </a>
-                    <a href="##">
-                        <img src="${this.res[i].img}" alt="">
-                    </a>
-                </div>`
-            for (var q = 0; q < 8; q++) {
+            if (i < 8) {
                 str += `
-                        <div class="floor-boxr">
                         <div class="product-item">
-                            <a href="##" target="_blank">
+                            <a href="http://localhost:83/goods.html?${this.res[i].goodsId}" target="_blank" list-id="${this.res[i].goodsId}">
                                 <div class="img-box">
-                                    <img alt="" src="${ this.res[q].img}">
+                                    <img alt="" src="${ this.res[i].img}">
                                 </div>
-                                    <h4 class="desc" title="">${this.res[q].name}</h4>
-                                    <p class="price">￥${this.res[q].price}/月</p>
+                                    <h4 class="desc" title="">${this.res[i].name}</h4>
+                                    <p class="price">￥${this.res[i].price}/月</p>
                             </a>
-                            </div>
                         </div>`
             }
-
         }
+        str = `<div class="floor-boxl">
+                    <a href="##">
+                        <img src="https://edzimg.edianzu.com/product/2019/07/2336657d84d31c5e12ad1bac1001d59b.jpg?x-oss-process=style/optimize90" alt="">
+                    </a>
+                    <a href="##">
+                        <img src="https://edzimg.edianzu.com/product/2019/07/2336657d84d31c5e12ad1bac1001d59b.jpg?x-oss-process=style/optimize90" alt="">
+                    </a>
+                </div>
+                <div class="floor-boxr">
+                ${str}
+                </div>`
+
         var str1 = ""
-        for (var j = 0; j < 2; j++) {
+        for (var j = 0; j < 5; j++) {
             str1 += `
             <div id="floor-1" class="tit">行政办公</div>
             ${str}

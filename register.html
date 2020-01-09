@@ -50,33 +50,33 @@
                     <ul class="nav-list">
                         <li>
                             <span class="form-tit">设置账号</span>
-                            <input id="phone" type="text" placeholder="请输入账号" error="账号格式不正确" emptyerror="请输入账号"
-                                class="">
+                            <input id="user" type="text" placeholder="请输入6-12位数字" error="账号格式不正确" emptyerror="请输入6-12账号"
+                                class="" maxlength="12">
                         </li>
                         <li class="form-error">
                             <span id="phoneError" class="show hide">
                                 <i class="icon-prefect-error"></i>
-                                手机号码格式不正确
+                                账号格式不正确
                             </span>
                         </li>
                         <li>
                             <span class="form-tit form-mtit">设置密码</span>
-                            <input id="pass" type="password" placeholder="8-32位数字与字母组合" valid="password"
-                                errortarget="passError" error="密码格式不正确（要求8-32位数字与字母组合）" emptyerror="请输入密码" class="">
+                            <input id="pass" type="password" placeholder="8-12位数字与字母组合" valid="password"
+                                errortarget="passError" error="密码格式不正确（要求8-12位数字与字母组合）" emptyerror="请输入密码" class="">
                         </li>
                         <li class="form-error">
                             <span id="passError" class="show hide">
                                 <i class="icon-prefect-error"></i>
-                                密码格式不正确（要求8-32位数字与字母组合）
+                                密码格式不正确（要求8-12位数字与字母组合）
                             </span>
                         </li>
                         <li>
                             <span class="form-tit form-mtit">确认密码</span>
                             <input id="pass2" type="password" placeholder="重新输入密码" valid="password"
-                                errortarget="passError" error="密码格式不正确（要求8-32位数字与字母组合）" emptyerror="请输入密码" class="">
+                                errortarget="passError" error="密码格式不正确（要求8-12位数字与字母组合）" emptyerror="请输入密码" class="">
                         </li>
                         <li class="form-error">
-                            <span id="passError" class="show hide">
+                            <span id="passError2" class="show hide">
                                 <i class="icon-prefect-error"></i>
                                 密码不匹配
                             </span>
@@ -96,74 +96,23 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-    <!-- <p>注册页面，调到<a href="./login.html">登录页面</a></p>
-    账号 <input type="text" name="" id="user"></br>
-    密码 <input type="text" name="" id="pass">
-    <input type="button" value="确定" id="btn"> -->
+    <div class="mengban">
+        <div class="zoomIn" style="width:400px;">
+            <h4>提示信息
+                <i class="icon"></i>
+            </h4>
+            <div class="bounced">
+                <div class="bounced-s">
+                    <div class="bounced-text"></div>
+                </div>
+                <div class="bounced-x">
+                    <a class="ok-btn">确认</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<script>
-
-    class register {
-        constructor() {
-            this.user = document.getElementById("user");
-            this.pass = document.getElementById("pass");
-            this.btn = document.getElementById("btn");
-            this.url = "http://127.0.0.1:80/api";
-            this.addEvent();
-        }
-
-        addEvent() {
-            var that = this;
-            btn.onclick = function () {
-                ajaxGet(that.url, function (res) {
-                    that.res = JSON.parse(res)
-                    alert(that.res.msg)
-                }, {
-                    user: user.value,
-                    pass: pass.value,
-                    type: "register"
-                })
-            }
-        }
-
-
-
-    }
-
-
-
-
-    // new register();
-
-
-
-
-    function ajaxGet(url, cb, data) {
-        data = data || {}
-        var str = "";
-        for (var i in data) {
-            str += `${[i]}=${data[i]}&`
-        }
-        var d = new Date();
-        url = url + "?" + str + "__lz=" + d.getTime();
-        var ajax = new XMLHttpRequest();
-        ajax.open("get", url, true);
-        ajax.onreadystatechange = function () {
-            if (ajax.readyState == 4 && ajax.status == 200) {
-                cb(ajax.responseText);
-            }
-        }
-        ajax.send();
-    }
-</script>
+<script src="./libs/jquery.js"></script>
+<script src="./libs/register.js"></script>
 
 </html>

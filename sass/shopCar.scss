@@ -1,0 +1,571 @@
+.layout{
+    width: 1190px;
+}
+*{margin:0;padding:0;}
+
+html{
+    background:#fff;
+
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+    color: #666d71;
+}
+
+.header{
+    height: 33px;
+    line-height: 33px;
+    background: #f5f5f5;
+    font-size: 12px;
+    color: #666d71;
+}
+
+dl{
+    margin: 0 auto;
+
+}
+
+.hl li{
+    float: left;
+    padding-left: 7px;
+}
+
+.hl li a:hover{
+    color:#37a3ff;
+}
+
+.hr li{
+    float: right;
+    padding-left: 7px;
+}
+.hr li a:hover{
+    color:#37a3ff;
+}
+
+.search{
+    background:#fff;
+    height: 114.77px;
+    display: flex;
+}
+.search .search-index{
+    /* flex-direction: row; */
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.index-search{
+    position: relative;
+    width: 520px;
+    margin: 15px 0 0 10px;
+    float: left;
+}
+
+.index-input{
+    /* position: relative; */
+    height: 40px;
+}
+
+
+.index-input .index-box{
+    position: relative;
+    display: inline-block;
+    width: 430px;
+    height: 36px;
+    border: 2px solid #3a90db;
+    
+}
+
+.index-input .index-box i{
+    position: absolute;
+    right: 13px;
+    top: 3px;
+    height: 30px;
+    width: 30px;
+    background:url(https://resources.edianzu.com/mall_new/online/images/search_del_btn.png) no-repeat center;
+    display: none;
+}
+
+.index-input input:nth-child(1){
+    position: absolute; 
+    width: 373px;
+    height: 36px;
+    border: none;
+    padding-left: 12px;
+    line-height: 36px;
+    outline: none;
+    padding-right: 20px;
+}
+
+.index-input input:nth-child(2){
+    float: right;
+    position: absolute;
+    right: 1px;
+    width: 100px;
+    height: 40px;
+    line-height: 36px;
+    background: #37a3ff;
+    font-size:16px;
+    color: #fff;
+    padding: 2px 0; 
+    border: 0; 
+    outline: none;
+}
+
+
+
+.search-index .index-word{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.search-index .index-word a{
+    padding-right: 11px;
+}
+
+.search-index .index-word a:hover{
+    padding-right: 11px;
+    color: #31a3ff;
+}
+
+
+.shopping-cart{
+    width: 1190px;
+    background: #fff;
+    margin: 0 auto;
+    .all-product{
+        margin-bottom: 8px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        color: #333;
+        font-weight: 700;
+    }
+}
+.product-tit{
+    height: 46px;
+    line-height: 46px;
+    font-size: 12px;
+    color: #333;
+    border: 1px solid #e6e6e6;
+    background-color: #eee;
+    border-radius: 4px;
+    clear: both;
+    .product-cb-all-box{
+        margin-left: 16px;
+        width: 117px;
+        cursor: pointer;
+        float: left;
+        label{
+            line-height: 46px;
+            font-size: 12px;
+            color: #333;
+            .product-cb-all{
+                margin-right: 10px;
+                cursor: pointer;    
+            }
+        }
+    }
+    .width-1{
+        width: 308px;
+        float: left;
+    }
+    .width-2{
+        width: 210px;
+        float: left;
+    }
+    .width-3{
+        width: 140px;
+        float: left;
+    }
+    .width-4{
+        width: 60px;
+        float: left;
+    }
+    .width-5{
+        margin-left: 30px;
+        float: left;
+        width: 208px;
+    }
+    .width-6{
+        width: 50px;
+        float: left;
+    }
+}
+
+
+
+
+.leased-goods{
+    .lease-product{
+        border:2px solid #f1f1f1
+    }
+    .product-layer{
+        border-bottom:2px solid #f1f1f1;
+        // border-bottom : none;
+        background-color: #f3fbfe;
+    }
+    .product-detail{
+        position: relative;
+        padding-bottom: 5px;
+        font-size: 12px;
+        clear: both;
+    }
+}
+
+.product-info{
+    min-height: 116px;
+    float: left;
+    width: 410px;
+    b{
+        position: absolute;
+        left: 16px;
+        top: 52px;
+    }
+    .product-box{
+        margin: 20px 0 4px 38px;
+        .pic{
+            float: left;
+            width: 84px;
+            height: 84px;
+            border: 1px solid #eee;
+            .product-link{
+                text-decoration: none;
+                cursor: pointer;
+                display: block;
+                img{
+                    width: 84px;
+                    height: 84px;               
+                }
+            }
+        }
+    }
+}
+
+.product-box{
+    .txt{
+        float: left;
+        margin-left: 9px;
+        width: 250px;
+        height: 86px;
+        line-height: 20px;
+        .product-link{
+            height: 40px;
+            color: #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            word-break: break-all;
+        }
+        .rent-type{
+            margin: 3px 0 6px;
+            width: 60px;
+            height: 18px;
+            line-height: 16px;
+            color: #e73c31;
+            text-align: center;
+            border: 1px #e73c31 solid;
+            border-radius: 2px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.lease-product-price{
+    margin: 18px 30px 0;
+    width: 180px;
+    float: left;
+    .month-rent-label{
+        float: left;
+        width: 58px;
+        line-height: 24px;
+    }
+    .month-rent-list{
+        float: left;
+    }
+    .month-rent-box1{
+        .month-rent-label{
+            float: left;
+            width: 58px;
+            line-height: 24px;
+        }
+        .month-rent-list{
+            float: left;
+            .month-rent-item{
+                float: left;
+                height: 24px;
+                line-height: 24px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.product-num{
+    margin: 0 30px;
+    width: 80px;
+    text-align: center;
+    font-size: 12px;
+    display: block;
+    float: left;
+    .number{
+        margin-top: 18px;
+        width: 78px;
+        height: 20px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        text-align: center;
+        .num-reduce{
+            border-right: 1px solid #ccc;
+            float: left;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 19px;
+            height: 20px;
+            line-height: 19px;
+            text-align: center;
+        }
+        .num{
+            width: 38px;
+            overflow: hidden;
+            float: left;
+            display: block;
+            margin: 0;
+            padding: 0;
+            height: 20px;
+            line-height: 19px;
+            text-align: center;
+            
+            .ipt-num{
+                display: inline-block;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border: none;
+                background: transparent;
+            }
+        }
+        .num-add{
+            border-left: 1px solid #ccc;
+            float: left;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 19px;
+            height: 20px;
+            line-height: 19px;
+            text-align: center;
+        }
+        }
+    }
+
+
+.down-pay-month{
+    width: 60px;
+    height: auto;
+    line-height: 60px;
+    text-align: center;
+    float: left;
+}
+
+.lease-product-sum{
+    margin: 15px 30px 0;
+    width: 180px;
+    float: left;
+    font-size: 12px;
+    p{
+        padding-top: 6px;
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        color: #333;
+        i{
+            font-style: normal;
+        }
+        .te{
+            color: red;
+
+        }
+    }
+
+}
+
+.product-handle{
+    margin-top: 21px;
+    width: 50px;
+    float: left;
+    font-size: 12px;
+    .delete{
+    display: block;
+    color: #333;
+    outline: none;
+    border: none;
+    border-radius: 0;
+    }
+}
+
+
+.product-rent-info{
+    margin-left: 38px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px dashed #f1f1f1;
+    clear: both;
+    .product-rent-month{
+        line-height: 56px;
+        font-size: 12px;
+        color: #666;
+        float: left;
+        width: 382px;
+        i{
+            padding: 0 2px;
+            font-weight: 700;
+            color: #e73c31;
+            line-height: 56px;
+            font-size: 12px;
+            font-style: normal;
+        }   
+    }
+}
+
+.arrival-time-tips-box{
+    line-height: 22px;
+    font-size: 12px;
+    padding: 2px 0 14px 38px;
+    color: #e73c31;
+    span{
+        font-weight: 700;
+        line-height: 22px;
+        font-size: 12px;
+    }
+    }
+
+    
+.bill-box{
+    margin: 15px 0;
+    padding-left: 38px;
+    width: 1188px;
+    color: #666;
+    font-size: 12px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    .bill-tit{
+        margin: 18px 0 0;
+        height: 24px;
+        line-height: 24px;
+        font-weight: 700;
+        #selected_zl_sum{
+            padding: 0 2px;
+            color: #e73c31;
+            font-style: normal;
+
+        }
+        #selected_sale_sum{
+            padding: 0 2px;
+            color: #e73c31; 
+            font-style: normal;
+        }
+    }
+    .bill-detail{
+        margin: 16px 0 14px;
+        color: #666;
+        font-size: 12px;  
+        li{
+            position: relative;
+            margin-bottom: 8px;
+            height: 24px;
+            line-height: 24px;
+            span{
+                display: inline-block;
+                width: 100px;
+                color: #333;
+                
+            }
+        } 
+        i{
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            font-weight: 400;
+            font-style: normal;
+            color: #e73c31; 
+            font-size: 18px;
+        } 
+    }
+}
+
+
+.settle-accounts-box{
+    margin: 0 auto;
+    width: 1188px;
+    height: 58px;
+    line-height: 58px;
+    color: #666;
+    font-size: 12px;
+    border: 1px solid #eee;
+    .product-cb-all-box {
+        float: left;
+        label{
+            margin-left: 16px;
+            cursor: pointer;
+            input{
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+                a{
+                    margin-left: 12px;
+                    color: #666;
+                }
+            }
+        .fr{
+            float: right;
+            .accounts-box{
+                float: left;
+                margin-right: 40px;
+                padding: 5px 0 0;
+            .pay-online{
+                display: block;
+                color: #666;
+                font-size: 12px;
+                line-height: 24px;
+                span{
+                    line-height: 48px;
+                }
+                strong{
+                    font-size: 18px;
+                    color: #e73c31;
+                }
+            }
+            
+        }
+    }
+}
+
+.settle-accounts{
+    margin-top: -1px;
+    width: 140px;
+    height: 60px;
+    line-height: 60px;
+    background: #37a3ff;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 3px;
+    border-radius: 0;
+    outline: none;
+    border: none;
+}
+

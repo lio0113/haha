@@ -190,7 +190,95 @@ html{
     border-radius: 3px;
 }
 
-
+.mengban{
+    z-index: 999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: url(../images/model-bg.png) repeat;
+    background: rgba(0,0,0,0.7);
+    font-size: 14px;
+    .zoomIn{
+    position: absolute;
+    height: 194px;
+    left: 50%;
+    top: 10%;
+    width: 430px;
+    top: 50%;
+    left: 50%;
+    margin: -141px 0 0 -216px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+    padding-bottom: 30px;
+    }
+    h4{
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px;
+    border-radius: 3px 3px 0 0;
+    background: #f2f2f2;
+    font-size: 18px;
+    padding-left: 20px;
+    color: #333;
+    }
+    i{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+    background-position: -919px -662px;
+    width: 15px;
+    cursor: pointer;
+    height: 15px;
+    }
+    .bounced{
+    padding: 25px 20px 0;
+    text-align: center;
+    font-size: 14px;
+    }
+    .bounced-s{
+    font-size: 14px;
+    line-height: 24px;
+    word-break: break-all;
+    color: #333;
+    display: inline-block;
+    .bounced-text{
+        font-size: 14px;
+        line-height: 24px;
+        word-break: break-all;
+        color: #333;
+        }
+    }
+    .bounced-x{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin: 25px 0 0;
+    a{
+    background: #169cff;
+    display: inline-block;
+    border-radius: 2px;
+    width: 120px;
+    height: 45px;
+    margin: 0 7px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 45px;
+    color: #fff;
+    cursor: pointer;
+        }
+    }
+}
 
 
 

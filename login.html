@@ -47,19 +47,19 @@
                 </div>
                 <ul>
                     <li>
-                        <input type="text" name="" id="" placeholder="请输入账号">
+                        <input type="text" name="" id="user" placeholder="请输入账号" maxlength="14">
                     </li>
                     <li class="te">请输入登录账号</li>
                     <li>
-                        <input type="text" name="" id="" placeholder="请输入密码">
+                        <input type="password" name="" id="pass" placeholder="请输入密码" maxlength="14">
                     </li>
                     <li class="te">请输入密码</li>
                 </ul>
-                <label for="auto">
+                <!-- <label for="auto">
                     <input type="checkbox" value="" id="auto">
                     两周内自动登录
                     <a href="##">忘记密码</a>
-                </label>
+                </label> -->
                 <a href="##" class="nav-a">立即登录</a>
                 <div id="entranceId" class="entrance entrance-more">
                     <a href="/register.html">没有账号？立即注册</a>
@@ -67,61 +67,23 @@
             </div>
         </div>
     </div>
-
-    <!-- <p>登录页面，没有账号去<a href=" ./register.html">注册 </a> </p> 账号 <input type="text" name="" id="user"></br>
-                            密码 <input type="text" name="" id="pass">
-                            <input type="button" value="确定" id="btn"> -->
+    <div class="mengban">
+        <div class="zoomIn" style="width:400px;">
+            <h4>提示信息
+                <i class="icon"></i>
+            </h4>
+            <div class="bounced">
+                <div class="bounced-s">
+                    <div class="bounced-text"></div>
+                </div>
+                <div class="bounced-x">
+                    <a class="ok-btn">确认</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<!-- <script>
-
-    class login {
-        constructor() {
-            this.user = document.getElementById("user");
-            this.pass = document.getElementById("pass");
-            this.btn = document.getElementById("btn");
-            this.url = "http://127.0.0.1:80/api";
-            this.addEven();
-        }
-
-        addEven() {
-            var that = this;
-            this.btn.onclick = function () {
-                ajaxPost(that.url, function (res) {
-                    that.res = JSON.parse(res);
-                    alert(that.res.msg)
-                }, {
-                    user: user.value,
-                    pass: pass.value,
-                    type: "login"
-                })
-            }
-        }
-
-    }
-
-
-
-    new login();
-
-
-
-
-    function ajaxPost(url, cb, data) {
-        data = data || {}
-        var str = "";
-        for (var i in data) {
-            str += `${[i]}=${data[i]}&`
-        }
-        var ajax = new XMLHttpRequest();
-        ajax.open("post", url, true);
-        ajax.onreadystatechange = function () {
-            if (ajax.readyState == 4 && ajax.status == 200) {
-                cb(ajax.responseText);
-            }
-        }
-        ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        ajax.send(str);
-    };
-</script> -->
+<script src="./libs/jquery.js"></script>
+<script src="./libs/login.js"></script>
 
 </html>

@@ -1,0 +1,579 @@
+
+.layout{
+    width: 1200px;
+}
+*{margin:0;padding:0;}
+
+html{
+    background:#F2F2F2;
+
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration:none;
+    color: #666d71;
+}
+
+.header{
+    height: 33px;
+    line-height: 33px;
+    background: #f5f5f5;
+    font-size: 12px;
+    color: #666d71;
+}
+
+dl{
+    margin: 0 auto;
+
+}
+
+.hl li{
+    float: left;
+    padding-left: 7px;
+}
+
+.hl li a:hover{
+    color:#37a3ff;
+}
+
+.hr li{
+    float: right;
+    padding-left: 7px;
+}
+.hr li a:hover{
+    color:#37a3ff;
+}
+
+.search{
+    background:#fff;
+    height: 114.77px;
+    display: flex;
+}
+.search .search-index{
+    /* flex-direction: row; */
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.index-search{
+    position: relative;
+    width: 520px;
+    margin: 15px auto 0;
+    float: left;
+
+}
+
+.index-input{
+    /* position: relative; */
+    height: 40px;
+}
+
+
+.index-input .index-box{
+    position: relative;
+    display: inline-block;
+    width: 430px;
+    height: 36px;
+    border: 2px solid #3a90db;
+    
+}
+
+.index-input .index-box i{
+    position: absolute;
+    right: 13px;
+    top: 3px;
+    height: 30px;
+    width: 30px;
+    background:url(https://resources.edianzu.com/mall_new/online/images/search_del_btn.png) no-repeat center;
+    display: none;
+}
+
+.index-input input:nth-child(1){
+    position: absolute; 
+    width: 373px;
+    height: 36px;
+    border: none;
+    padding-left: 12px;
+    line-height: 36px;
+    outline: none;
+    padding-right: 20px;
+}
+
+.index-input input:nth-child(2){
+    float: right;
+    position: absolute;
+    right: 1px;
+    width: 100px;
+    height: 40px;
+    line-height: 36px;
+    background: #37a3ff;
+    font-size:16px;
+    color: #fff;
+    padding: 2px 0; 
+    border: 0; 
+    outline: none;
+}
+
+
+
+.search-index .index-word{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.search-index .index-word a{
+    padding-right: 11px;
+}
+
+.search-index .index-word a:hover{
+    padding-right: 11px;
+    color: #31a3ff;
+}
+
+.search-index .index-shop-car{
+    text-align: center;
+    line-height: 40px;
+}
+
+.search-index .index-shop-car a{
+    width: 138px;
+    height: 40px;
+    display: block;
+    border: 1px solid #ddd;
+}
+
+.search-index .index-shop-car i{
+    display: inline-block;
+    height: 16px;
+    width: 18px;
+    background: url("https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423") no-repeat center;
+    background-position: -693px -840px;
+}
+
+.nav{
+    background: #fff;
+
+}
+
+.nav .nav-content{
+    margin: 0 auto;
+    height: 40px;
+}
+
+.nav .nav-content h2{
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: #31a3ff;
+    text-align: center;
+
+}
+
+.nav .nav-content h2 a{    
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.nav .nav-left-list{
+    padding-top:10px ;
+    background: #f8f8f8;
+    ul{
+        display: none;
+    }
+}
+
+.nav .nav-left-list li{
+    height: 50px;
+}
+
+.nav .nav-left-list a{
+    display: block;
+}
+
+.nav .nav-left-list .title-icon{
+    display:inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 10px 3px 0 16px;
+
+}
+
+.nav .nav-left-list .title-icon1{
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+.nav .nav-left-list .nav-ii{
+    background: url("https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423") no-repeat center;
+    width: 7px;
+    height: 13px;
+    display: inline-block;
+    color: black;
+    background-position: -521px -351px;
+    padding-right: 10px;
+}
+
+.nav .nav-left-list span{
+    display: inline-block;
+    width: 120px;
+    font: 14px/50px "";
+    color: #333;
+    text-align: left;
+}
+
+.nav .nav-content .nav-left{
+    float: left;
+}
+
+.nav .nav-content .nav-right ul{
+    float: left;
+    line-height: 40px;
+
+}
+
+.nav .nav-content .nav-right li{
+    float: left;
+    padding: 0 15px;
+}
+
+.nav .nav-content .nav-right li a:hover{
+    border-bottom: 2px solid #31a3ff;
+    margin-bottom: 3px;
+    color: #31a3ff;
+}
+
+.bread-nav{
+    width: 1200px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 auto;
+    font-size: 12px;
+    li{
+        line-height: 46px;
+        float: left;
+        color: #333333;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    a{
+        color: #333;
+    }
+}
+
+.box-goods{
+        background: #fff;
+        box-sizing: border-box;
+        margin: 0 auto;
+        width: 1200px;
+        padding: 20px;
+        clear: both;
+        height: 555px;
+    .left-panel{
+        width: 450px;
+        float: left;
+        box-sizing: border-box;
+    }
+    .big-img-box{
+        position: relative;
+        width: 450px;
+        float: left;
+        box-sizing: border-box;
+    .big-img{
+        position: relative;
+        overflow: hidden;
+        width: 450px;
+        height: 450px;
+        border: 1px solid #dbdbdb;
+        box-sizing: border-box;
+        img{
+            width: 100%;
+            border: none;
+            vertical-align: top;
+        }
+        .img-left{
+            position:absolute;
+            top:0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(57,164,234,0.4);
+            display: none;
+        }
+    }
+    .img-right{
+        position:absolute;
+        top:0;
+        left: 460px;
+        width: 700px;
+        height:448px;
+        display: none;
+        overflow: hidden;
+        border: 1px solid #dbdbdb;
+        background-color: white;
+        z-index: 99;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 900px;
+            width: 900px;
+        }
+    }
+    }
+    .small-img-box{
+        overflow: hidden;
+        width: 450px;
+        height: 80px;
+        margin-top: 20px;
+    }
+    .collect-wrapper{
+        margin: 20px 0 0 6px;
+        font-size: 12px;
+        color: #666;
+        float: left;
+        .wx-share{
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .wx-icon{
+            line-height: 12px;
+            cursor: pointer;
+            font-size: 12px;
+            color: #666;
+        }
+        .icon-share{
+            display: inline-block;
+            background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+            background-position: -107px -1010px;
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+             margin: -4px 3px 0 0;       
+        }
+        .collect-box{
+            line-height: 12px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .icon-collect{
+            background-image: url(https://resources.edianzu.com/mall_new/20200103_1/css/web.png?v=1578048334423);
+            background-position: -743px -868px;
+            width: 15px;
+            height: 14px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: -4px 3px 0 0;
+        }
+        
+    }
+}
+
+.right-panel{
+    position: relative;
+    float: left;
+    padding-left: 40px;
+    width: 670px;
+    h3{
+        font-size: 18px;
+        font-weight: bolder;
+        line-height: 30px;
+        vertical-align: middle;
+        span{
+            border: 1px solid #e73c31;
+            border-radius: 2px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #e73c31;
+            height: 20px;
+            line-height: 30px;
+            padding: 0 3px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+    }
+    .sub-title{
+        color: #e73c31;
+        font-size: 14px;
+        line-height: 30px;
+        margin: 5px 0 20px;
+     }
+     .price-content{
+        height: 73px;
+        line-height: 73px;
+        border-bottom: 1px solid #dbdbdb;
+        margin-bottom: 10px;
+        p{
+            height: 73px;
+            background: #f9f9f9;
+            border-top: 1px dashed #dddddd;
+            .price-type{
+                display: inline-block;
+                font-size: 12px;
+                width: 112px;
+                padding-left: 23px;
+                box-sizing: border-box;
+                color: #999999;
+                line-height: 80px;
+            }
+            .price-amount{
+                color: #e73c31;
+                font-size: 24px;
+            }
+        }
+     }
+}
+
+.number{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    clear: both;
+    margin-top: 11px;
+    dd{
+        float: left;
+        width: 558px;
+        height: auto;
+        line-height: 36px;
+        .count-box{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            color: red;
+            margin-bottom: 8px;
+            .disabled{
+                width: 30px;
+                height: 30px;
+                line-height: 28px;
+                font-size: 20px;
+                background: #fff;
+                border: 1px solid #dbdbdb;
+                float: left;
+                display: block;
+                cursor: pointer;
+                color: #333333;
+                box-sizing: border-box;
+                text-align: center;}
+                .num{
+                    padding: 0 10px;
+                    line-height: 30px;
+                    height: 30px;
+                    float: left;
+                    width: 70px;
+                    box-sizing: border-box;
+                    text-align: center;
+                }
+                .put{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 28px;
+                    font-size: 20px;
+                    background: #fff;
+                    border: 1px solid #dbdbdb;
+                    float: left;
+                    display: block;
+                    cursor: pointer;
+                    color: #333333;
+                    box-sizing: border-box;
+                    text-align: center;
+                    }
+        }
+    }
+}
+
+
+.info-btn-box{
+    font-size: 14px;
+    margin: 0;
+    clear: both;
+    margin-top: 10px;
+    padding: 10px 0 0 23px;
+    border-top: 1px dashed #dddddd;
+    line-height: 50px;
+    .rent-price{
+        height: 50px;
+        line-height: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 12px;
+        color: #999999;
+        margin-bottom: 20px;
+    }
+    #sumPrice{
+        font-size: 20px;
+        color: #e73c31;
+        margin-left: 20px;
+    }
+    ._price_explain{
+        line-height: 50px;
+    }
+    .deposit-price{
+        margin-left: 40px;
+        line-height: 50px;
+        color: #999999;
+        #sumDepositPrice{
+            font-size: 20px;
+            color: #e73c31;
+            margin-left: 20px;
+        }
+    }
+}
+
+.add-to-cart-btn{padding: 0;
+    margin: 0;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: box-shadow .25s ease-in-out;
+    width: 130px;
+    height: 50px;
+    background: #fff;
+    color: #169dff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 48px;
+    margin-right: 10px;
+    border-radius: 2px;
+    border: 1px solid #169dff;
+}
+
+.submit-btn{
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .25s ease-in-out;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background: #169dff;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
