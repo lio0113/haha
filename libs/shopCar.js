@@ -26,7 +26,7 @@ class shopCar {
                     <div class="product-detail">
                         <!-- 商品 -->
                         <div class="product-info">
-                            <b><input type="checkbox" id="p_cb_206237" class="lease-product" value="" checked="checked">
+                            <b><input type="checkbox" id="p_cb_${this.carList[i].id}" class="lease-product-cb" checked="checked">
                             </b>
                             <div class="product-box">
                                 <div class="pic">
@@ -111,15 +111,29 @@ class shopCar {
 
     addEvent() {
         var that = this;
-        this.onoff = 0;
         // 全选
+        this.onoff = 0;
         $(".shopping-cart").on("click", ".product-cb-all", function () {
-            if (that.onoff === 0) {
-                $(".product-layer").find(".lease-product-cb").attr("checked", "checked")
-                $(".shopping-cart").find(".product-cb-all").attr("checked", "checked")
-                that.onoff = 1;
+            if (that.onoff == 0) {
+                $(".product-layer").find(".lease-product-cb").prop("checked", true)
+                $(".shopping-cart").find(".product-cb-all").prop("checked", true)
+                that.onoff = 1
+            } else if (that.onoff == 1) {
+                $(".product-layer").find(".lease-product-cb").prop("checked", false)
+                $(".shopping-cart").find(".product-cb-all").prop("checked", false)
+                that.onoff = 0;
             }
         })
+
+        $(".shopping-cart").on("click", "#del_selected", function () {
+            that.del_selected();
+        })
+
+
+        $(".shopping-cart").on("click", "#clear_carts", function () {
+            that.del_selected();
+        })
+
 
         // 购物车数量加减   
         $(".lease-product").on("click", ".num-reduce", function () {
@@ -151,8 +165,7 @@ class shopCar {
         this.carList = localStorage.getItem("carMsg") ? JSON.parse(localStorage.getItem("carMsg")) : [];
         this.dd = a.parent().attr("class").split(" ")[1];
         this.type = $(a.context).attr("class");
-        // console.log($(a.context).attr("class"));
-        // console.log(a.children("input").val(), this.carList[i].num)
+
         for (var i = 0; i < this.carList.length; i++) {
 
             if (this.carList[i].id == this.dd) {
@@ -188,6 +201,34 @@ class shopCar {
         localStorage.setItem("carMsg", JSON.stringify(this.carList))
         this.display();
     }
+
+
+    del_selected() {
+        var checked = $(".leased-goods").find(".lease-product-cb");
+        // console.log(checked);
+
+        for (let i = 0; i < checked.length; i++) {
+            if ($(checked[i]).prop("checked")) {
+                this.delNum = $(checked[i]).attr("id").split("_")[2];
+                // var aaaa = $(checked[i]).parent().parent().parent().parent()[0]
+                // $(aaaa).remove();
+                // console.log($(aaaa).remove());
+
+                // console.log($(checked[i]).parent().parent().parent().parent()[0]);
+
+                for (var j = 0; j < this.carList.length; j++) {
+                    if (this.delNum == this.carList[j].id) {
+                        this.carList.splice(j, 1)
+                    }
+                }
+            }
+        }
+        localStorage.setItem("carMsg", JSON.stringify(this.carList));
+        this.display();
+    }
+
+
+
 }
 
 new shopCar()

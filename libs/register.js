@@ -22,7 +22,9 @@ class register {
             } else {
                 $(this).parent().next("li").css("opacity", "0");
                 that.a = 1;
-                // console.log(that.a, that.b, that.c);
+                console.log(that.a, that.b, that.c);
+                // that.addEvent();
+
             }
         })
 
@@ -37,30 +39,36 @@ class register {
             } else {
                 $(this).parent().parent().find("li").eq(5).css("opacity", "0")
                 that.b = 1;
+                // that.addEvent();
+
             }
             if (!reg.test(this.value)) {
                 $(this).parent().next("li").css("opacity", "1")
             } else {
                 $(this).parent().next("li").css("opacity", "0");
                 that.b = 1;
+                // that.addEvent();
             }
             // console.log(that.a, that.b, that.c);
-
-            that.addEvent();
 
         })
 
         $("body").on("blur.a", "#pass2", function () {
             var li = $(this).parent().parent().find("li").eq(2).children("input").val()
-
             if (this.value != li || this.value == "") {
                 $(this).parent().next("li").css("opacity", "1")
             } else {
                 $(this).parent().next("li").css("opacity", "0");
                 that.c = 1;
-                // console.log(that.a, that.b, that.c);
+                console.log(that.a, that.b, that.c);
+                // that.addEvent();
             }
+            that.addEvent();
+
+
         })
+        // console.log(this.a, this.b, this.c);
+
         // this.addEvent();
     }
 
@@ -68,20 +76,17 @@ class register {
         var that = this;
         this.sum = this.a + this.b + this.c;
         $(".nav-list").on("click", "#submitBtn", function () {
-            // console.log(that.sum);
+            console.log(that.sum);
+            // console.log(this.a, this.b, this.c);
             if (that.sum === 3) {
                 that.u = that.user.val();
                 that.p = that.pass.val();
                 that.setDate();
             }
-
-
         })
 
 
         $(".mengban").on("click", ".icon", function () {
-            console.log(that.code);
-
             if (that.code == 0) {
                 $(".mengban").fadeOut()
                 setTimeout(() => {
@@ -93,8 +98,6 @@ class register {
         })
 
         $(".mengban").on("click", ".ok-btn", function () {
-            console.log(that.code);
-
             if (that.code == 0) {
                 $(".mengban").fadeOut()
                 setTimeout(() => {
@@ -108,22 +111,27 @@ class register {
 
     setDate() {
         this.msg = localStorage.getItem("userMsg") ? JSON.parse(localStorage.getItem("userMsg")) : [];
-        console.log(this.sum);
+        // console.log(this.sum);
 
         var b = this.msg.some((val) => {
             return val.user === this.u;
         })
         if (b) {
-            // console.log("你这个用户名太火了，换一个吧");
             this.code = 1;
             this.display();
+            console.log(b);
+            $(".nav-list").find("input").val("")
+
         } else {
+            console.log(b);
+
             this.msg.push({
                 user: this.u,
                 pass: this.p,
                 onoff: 0
             })
             localStorage.setItem("userMsg", JSON.stringify(this.msg))
+
             this.code = 0;
             this.display()
             // setInterval(() => {
@@ -138,15 +146,17 @@ class register {
         // 1.成功
         // 2.密码失败
         // 3.账号不存在
-        if (this.code == 0) {
-            $(".mengban").fadeIn()
-            $("div[class=bounced-text]").html("注册成功")
-        } else if (this.code == 1) {
+        // console.log(this.code);
+        if (this.code == 1) {
             $(".mengban").fadeIn()
             $("div[class=bounced-text]").html("注册失败，用户名重复")
+        } else if (this.code == 0) {
+            $(".mengban").fadeIn()
+            $("div[class=bounced-text]").html("注册成功")
         }
     }
 }
+
 
 
 new register();

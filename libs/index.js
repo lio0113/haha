@@ -3,6 +3,7 @@ class xuanran {
         this.floor = document.querySelector(".floor");
         this.url = "/shuju.json";
         this.load();
+        this.addEvent();
     }
 
     load() {
@@ -51,6 +52,18 @@ class xuanran {
             `
         }
         this.floor.innerHTML = str1
+    }
+
+
+    addEvent() {
+        $(".nav-item-box").hover(function () {
+            console.log(this);
+            $(this).find(".sanji").css("display", "block")
+            $(this).css({ background: "#fff", color: "#31a3ff" })
+        }, function () {
+            $(this).find(".sanji").css("display", "none")
+            $(this).css({ background: "#f5f5f5", color: "#333" })
+        })
     }
 }
 
